@@ -14,7 +14,7 @@ iamInstanceProfileName="basicProfilePrivate-Test"
 iams3accessPolicy="s3-access-permission-policy-private-TesT"
 loadBalancerName="loadBalancerPrivateTest"
 autoScalingGroupName="auto-scaling-private-network-test"
-#cidr-block allocated to vpc is 10.0.0.0/16
+#cidr-block allocated to vpc is 192.168.0.0/16
 #Replaces bucket name in bucket policy file to the one specified in bucket name variable
 sed -i "s/BucketName/$s3bucketname/g" bucket-policy.json
 aws iam create-role --role-name $iamRoles3Access --assume-role-policy-document file://policy-trust.json
